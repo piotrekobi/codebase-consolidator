@@ -11,7 +11,7 @@ When working with AI assistants, you often need to share multiple files to provi
 
 ## Usage
 
-1. Create a `.codebase_filenames` file in your project root:
+1. Create a `.codebase_filenames.txt` file in your project root:
     ```
     Included:
     src/main.py
@@ -29,7 +29,7 @@ When working with AI assistants, you often need to share multiple files to provi
     python codebase_consolidator.py
     ```
 
-The script will generate a `.codebase_content` file containing your project tree and the contents of specified files.
+The script will generate a `.codebase_content.txt` file containing your project tree and the contents of specified files.
 
 ## Alias Setup (PowerShell)
 
@@ -64,13 +64,13 @@ The script will generate a `.codebase_content` file containing your project tree
 
 ## File Format
 
-**`.codebase_filenames`:**
+**`.codebase_filenames.txt`:**
 - `Included:` section - List files you want to include in the output
 - `Ignored from tree:` section - Patterns for files/directories to exclude from the project tree (uses glob patterns like .gitignore)
 
 ## Output Example
 
-The generated `.codebase_content` file will look like this:
+The generated `.codebase_content.txt` file will look like this:
 
 ```
 Project Tree:
