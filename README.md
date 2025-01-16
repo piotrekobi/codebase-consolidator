@@ -1,6 +1,6 @@
 # Codebase Consolidator
 
-A simple utility to consolidate your codebase into a single file, making it easier to share your project context with AI assistants like Claude. Instead of uploading multiple files one by one, you can create a single file containing your entire codebase structure and the contents of selected files.
+A simple utility to consolidate your codebase into a single file, making it easier to share your project context with AI assistants like GPT or Claude. Instead of uploading multiple files one by one, you can create a single file containing your entire codebase structure and the contents of selected files.
 
 ## Why?
 
