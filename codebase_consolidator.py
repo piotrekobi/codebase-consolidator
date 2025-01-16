@@ -3,15 +3,15 @@ from pathlib import Path
 import fnmatch
 
 # Always ignore these files
-BUILT_IN_IGNORES = ['.codebase_filenames', '.codebase_content']
+BUILT_IN_IGNORES = ['.codebase_filenames.txt', '.codebase_content.txt']
 
 def parse_codebase_filenames():
-    """Parse the .codebase_filenames file to get included files and ignored patterns."""
+    """Parse the .codebase_filenames.txt file to get included files and ignored patterns."""
     included_files = []
     ignored_patterns = []
     
     current_section = None
-    with open('.codebase_filenames', 'r') as f:
+    with open('.codebase_filenames.txt', 'r') as f:
         for line in f:
             line = line.strip()
             if not line:
@@ -99,7 +99,7 @@ def consolidate_codebase():
     tree = generate_tree(ignored_patterns)
     tree_text = "\n".join(print_tree(tree))
     
-    with open('.codebase_content', 'w', encoding='utf-8') as out:
+    with open('.codebase_content.txt', 'w', encoding='utf-8') as out:
         # Write the tree
         out.write(tree_text + "\n\n")
         out.write("=" * 80 + "\n\n")
@@ -131,7 +131,7 @@ def consolidate_codebase():
 if __name__ == "__main__":
     try:
         consolidate_codebase()
-        print("Successfully consolidated codebase into .codebase_content")
+        print("Successfully consolidated codebase into .codebase_content.txt")
     except Exception as e:
         print(f"Error: {str(e)}")
         exit(1)
